@@ -1,0 +1,18 @@
+// program that orders integers
+
+int main() {
+    int i1=0;int i2=0;int i3=0;
+    cout<<"Please enter the three integers you would like ordered 'x y z' then press 'enter'\n\n";
+    cin>>i1>>i2>>i3;
+
+    int p1=0; int p2=0; int p3=0;
+
+    if(i1<=i2) { p1=i1; p2=i2;}               //p1 signifiys position 1 lowest to highest
+    if(i1>=i2) { p1=i2; p2=i1;}               //(low, mid, high)(p1,p2,p3)
+
+    if(i3>p2) {p3=i3;}
+    if(i3<p2) {p3=p2;   p2=i3;}
+    if(i3<p1) {p3=p2; p2=p1; p1=i3;}
+
+    cout<<" "<<p1<<" "<<p2<<" "<<p3<<" ";
+}
