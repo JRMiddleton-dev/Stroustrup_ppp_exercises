@@ -1,0 +1,22 @@
+//Exercise 5 - The relation ship between two integers (floating point)
+
+int main() {
+
+    double val1=0;
+    double val2=0;
+
+    cout<<"Please enter two integer values, then press enter\n";
+
+    cin>>val1>>val2;
+
+    if(val1<val2) {cout<<val1<<"<"<<val2<<".\n";}
+    if(val1>val2) {cout<<val1<<">"<<val2<<".\n";}
+
+    cout<<"Sum== "<<val1+val2<<".\n";
+    if(val1<val2) {cout<<"diff== "<<val2-val1<<".\n";}
+    if(val1>val2) {cout<<"diff== "<<val1-val2<<".\n";}
+    cout<<"Product== "<<val1*val2<<".\n";
+
+    cout<<"ratio== "<<val1/val2<<".\n";
+
+}
