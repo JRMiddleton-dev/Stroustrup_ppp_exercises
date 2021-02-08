@@ -1,0 +1,36 @@
+#include "std_lib_facilities.h"
+
+//Chapter 3 - Drill
+
+//code from section 3.1
+
+//program that wirtes a letter for you.
+
+int main()
+{
+    cout<<"Enter the name of the person you want to write to, their age,"
+          "your other friends name and their sex m/f then press 'enter':\n";
+    string first_name;
+    string friend_name;
+    int age=1;
+    char friend_sex=0;                      //defining and initializing variables
+
+    cin>>first_name>>age>>friend_name>>friend_sex;              //inputting the variables
+
+    if (age<=0) {simple_error("you're kidding!"); }
+    if (age>=110) {simple_error("you're kidding!"); }           //error code for unreasonable values
+
+    cout<<"Dear "<<first_name<<",\n";
+    cout<<"How are you? I am fine. Weird weather we are having.\n"
+          "I hear you just had a birthday and your are "<<age<<" years old.\n";
+    if (age<12) {cout<<"Next year you will be "<<age+1<<"!\n"; }
+    if (age==17) {cout<<"Next year you will be able to vote!\n";}
+    if (age>70) {cout<<"I hope you are enjoying retirement.\n";}       //response depending on age.
+
+    cout<<"have you seen "<<friend_name<<" lately?\n";
+    if (friend_sex=='m') {cout<<"if you see "<<friend_name<<" please ask him to call me\n"; }
+    if (friend_sex=='f') {cout<<"if you see "<<friend_name<<" please ask her to call me\n"; }           //sex check
+
+    cout<<"Look forward to hearing from you soon!\n\n"      //signing off
+          "Best wishes\n\n"
+          "James\n";
